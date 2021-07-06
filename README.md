@@ -1,0 +1,1 @@
+supports true color
