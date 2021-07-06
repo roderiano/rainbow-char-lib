@@ -1,1 +1,1 @@
-supports true color
+RainbowChar is a lib that stylizes text by formatting in ANSI escape code. It only supports true color terminals.

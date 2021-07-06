@@ -1,6 +1,17 @@
 import re
 
 def convert_hex_color_to_ansi(hex_color: str):
+    """
+    Convert hexadecimal color to ANSI code.
+
+    Parameters:
+    hex_color (str): hexadecimal color formatted (Example: #FFFFFF)
+
+    Returns:
+    str | None: return ANSI code or None if hex_color is not valid
+
+   """
+
     if re.match(r'#(?:[a-fA-F0-9]{3}|[a-fA-F0-9]{6})', hex_color):
         hex_color = hex_color.replace('#', '')
         
