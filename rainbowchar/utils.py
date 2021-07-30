@@ -1,8 +1,8 @@
 import re
 
-def convert_hex_color_to_ansi(hex_color: str):
+def convert_hex_color_to_rgb(hex_color: str):
     """
-    Convert hexadecimal color to ANSI code.
+    Convert hexadecimal color to RGB tuple.
 
     Parameters:
     hex_color (str): hexadecimal color formatted (Example: #FFFFFF)
@@ -21,6 +21,6 @@ def convert_hex_color_to_ansi(hex_color: str):
         else:
             rgb = (int(hex_color[0:1], 16), int(hex_color[1:2], 16), int(hex_color[2:3], 16))
 
-        return '\033[38;2;{};{};{}m'.format(rgb[0], rgb[1], rgb[2])
+        return rgb
     else:
         return None
