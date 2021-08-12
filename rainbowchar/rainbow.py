@@ -1,6 +1,7 @@
+import re
 from rainbowchar import utils, exceptions
 
-def paint(text: str, foreground: str=None, background: str=None):
+def paint(text: str, foreground: str=None, background: str=None, bold: bool=False, italic: bool=False, underline: bool=False):
     """
     Format text string with style parameters.
 
@@ -8,12 +9,15 @@ def paint(text: str, foreground: str=None, background: str=None):
     text (str): Text to stylize
     foreground (str): Hexadecimal color of foreground
     background (str): Hexadecimal color of background
+    bold (bool): Bold flag
+    italic (bool): Italic flag
+    underline (bool): Underline flag
 
     Returns:
     str: return text formatted in ANSI code
 
    """
-    result: str
+    result = '\033['
     
     if foreground:
         rgb = utils.convert_hex_color_to_rgb(foreground)
@@ -23,7 +27,7 @@ def paint(text: str, foreground: str=None, background: str=None):
             
         r, g, b = rgb
 
-        result = '\033[38;2;{};{};{}m{}\033[0m'.format(r, g, b, text)
+        result += '38;2;{};{};{};'.format(r, g, b)
 
     if background:
         rgb = utils.convert_hex_color_to_rgb(background)
@@ -33,8 +37,22 @@ def paint(text: str, foreground: str=None, background: str=None):
             
         r, g, b = rgb
 
-        result = '\033[48;2;{};{};{}m{}\033[0m'.format(r, g, b, result if foreground else text)
+        result += '48;2;{};{};{};'.format(r, g, b)
 
-    # print(result)
+    if bold:
+        result += '1;'.format(result)
+    
+    if italic:
+        result += '3;'.format(result)
+
+    if underline:
+        result += '4;'.format(result)
+    
+    if result != '\033[':
+        result = result[:-1]
+
+    result += 'm{}\033[0m'.format(text)
+    
+    print('result: ' + result)
     
     return result
