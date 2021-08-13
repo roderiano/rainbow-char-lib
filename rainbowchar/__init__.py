@@ -1,0 +1,2 @@
+from rainbowchar.rainbow import paint
+from rainbowchar.utils import convert_hex_color_to_rgb

@@ -1,4 +1,3 @@
-import re
 from rainbowchar import utils, exceptions
 
 def paint(text: str, foreground: str=None, background: str=None, bold: bool=False, italic: bool=False, underline: bool=False):
@@ -52,7 +51,5 @@ def paint(text: str, foreground: str=None, background: str=None, bold: bool=Fals
         result = result[:-1]
 
     result += 'm{}\033[0m'.format(text)
-    
-    print('result: ' + result)
     
     return result
