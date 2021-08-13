@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='rainbowchar',
     packages=['rainbowchar'],
-    version='0.1',
+    version='1.0',
     description='RainbowChar is a lib that stylizes text by formatting in ANSI escape code. It only supports true color terminals.',
     author='Gabriel da Rosa Silveira',
     author_email='gabrielsilveirapro@gmail.com',
