@@ -28,7 +28,7 @@ if __name__ == '__main__':
 ```
 
 
-## Parameter list
+## Parameters
 Function paint parameter list.
 
 | Parameter  | Description                     | Type | Default |
