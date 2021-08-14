@@ -8,7 +8,7 @@ setup(
     author='Gabriel da Rosa Silveira',
     author_email='gabrielsilveirapro@gmail.com',
     url='https://github.com/roderiano/rainbow-char-lib',
-    download_url='https://github.com/roderiano/rainbow-char-lib/archive/refs/tags/v1.0.tar.gz',
+    download_url='https://github.com/roderiano/rainbow-char-lib/archive/refs/tags/v1.1.tar.gz',
     license='MIT',
     install_requires=[],
     setup_requires=['pytest-runner==4.4'],
