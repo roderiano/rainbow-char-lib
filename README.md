@@ -33,12 +33,12 @@ Function paint parameter list.
 
 | Parameter  | Description                     | Type | Default |
 |:-----------|:--------------------------------|:----:|:-------:|
-| text       | Text to stylize                 | str  |   none  |
-| foreground | Hexadecimal color of foreground | str  |   none  |
-| background | Hexadecimal color of background | str  |   none  |
-| bold       | Bold flag                       | bool |   none  |
-| italic     | Italic flag                     | bool |   none  |
-| underline  | Underline flag                  | bool |   none  |
+| text       | Text to stylize                 | str  |   None  |
+| foreground | Hexadecimal color of foreground | str  |   None  |
+| background | Hexadecimal color of background | str  |   None  |
+| bold       | Bold flag                       | bool |   False |
+| italic     | Italic flag                     | bool |   False |
+| underline  | Underline flag                  | bool |   False |
 
 
 ## License
